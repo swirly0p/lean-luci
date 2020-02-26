@@ -35,7 +35,10 @@ jobs:
         git config --global user.email "hue715@gmail.com"
         git config --global user.name "hue715"
     - name: Load upstream commits
-      run: git pull https://github.com/coolsnowwolf/luci.git --no-edit
+      run : |
+        git pull https://github.com/coolsnowwolf/luci.git --no-edit
+        cd ./applications/luci-app-serverchan
+        git pull https://github.com/tty228/luci-app-serverchan.git --no-edit
 
     - name: Push Commits
       env:

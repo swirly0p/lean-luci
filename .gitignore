@@ -7,3 +7,4 @@ dist/
 /docs
 modules/luci-base/src/po2lmo
 .DS_Store
+applications/luci-app-udpxy/po/.DS_Store

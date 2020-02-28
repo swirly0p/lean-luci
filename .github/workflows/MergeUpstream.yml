@@ -38,8 +38,8 @@ jobs:
       run: |
         git pull https://github.com/coolsnowwolf/luci.git --no-edit
         git clone -b openwrt-19.07 https://github.com/openwrt/luci.git
-        mv ./luci/applications/luci-app-radicale2/po/zh_hans ./luci/applications/luci-app-radicale2/po/zh-cn
-        mv ./luci/applications/luci-app-radicale2/po/zh_hant ./luci/applications/luci-app-radicale2/po/zh-tw
+        mv ./luci/applications/luci-app-radicale2/po/zh_Hans ./luci/applications/luci-app-radicale2/po/zh-cn
+        mv ./luci/applications/luci-app-radicale2/po/zh_Hant ./luci/applications/luci-app-radicale2/po/zh-tw
         mv ./luci/applications/luci-app-radicale2/po/pt_BR ./luci/applications/luci-app-radicale2/po/pt-br
         mv ./luci/applications/luci-app-radicale2/po/nb_NO ./luci/applications/luci-app-radicale2/po/no
         git mv ./luci/applications/luci-app-radicale2 ./applications/luci-app-radicale2

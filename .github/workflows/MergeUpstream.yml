@@ -17,9 +17,20 @@ on:
        - master
 
 jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: repo-sync2
+      uses: wei/git-sync@master
+      with:
+        SOURCE_REPO: "https://github.com/coolsnowwolf/luci"
+        SOURCE_BRANCH: "master"
+        DESTINATION_REPO: "git@github.com:hue715/lean-luci.git"
+        DESTINATION_BRANCH: "master"
+        SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
 
   merge:
-
+    needs: [repo-sync]
     runs-on: ubuntu-latest
 
     steps:
